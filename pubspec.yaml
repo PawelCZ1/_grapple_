@@ -61,6 +61,11 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/default_user_profile_image.jpeg
+    - assets/white_belt_icon.png
+    - assets/blue_belt_icon.png
+    - assets/purple_belt_icon.png
+    - assets/brown_belt_icon.png
+    - assets/black_belt_icon.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
