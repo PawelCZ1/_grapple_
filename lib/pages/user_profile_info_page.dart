@@ -1,6 +1,9 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 import 'package:grapple/helpers/space.dart';
 import 'package:grapple/constants/custom_colors.dart';
+import 'package:grapple/views/user_profile_stat.dart';
 
 class UserProfileInfoPage extends StatelessWidget {
   const UserProfileInfoPage({super.key});
@@ -121,6 +124,24 @@ class UserProfileInfoPage extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
+            const VSpace(40),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 24),
+              decoration: BoxDecoration(
+                color: CustomColors.darkRose,
+                borderRadius: BorderRadius.circular(8)
+              ),
+              width: double.infinity,
+              height: 100,
+              child: Column(
+                children: [
+                  UserProfileStat('Wins', 0, 0),
+                  UserProfileStat('Loses', 0, 0),                  
+                  UserProfileStat('Subs', 0, 0),
+                  UserProfileStat('Taps', 0, 0)
+                ],
+              ),
             )
           ],
         ),
@@ -128,3 +149,4 @@ class UserProfileInfoPage extends StatelessWidget {
     );
   }
 }
+
