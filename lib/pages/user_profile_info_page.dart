@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:grapple/helpers/space.dart';
 import 'package:grapple/constants/custom_colors.dart';
 import 'package:grapple/views/user_profile_stat.dart';
+import 'package:grapple/views/user_profile_summary.dart';
 
 class UserProfileInfoPage extends StatelessWidget {
   const UserProfileInfoPage({super.key});
@@ -31,55 +32,7 @@ class UserProfileInfoPage extends StatelessWidget {
               ),
             ),
             const VSpace(24),
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 24),
-              padding: const EdgeInsets.all(24),
-              decoration: BoxDecoration(
-                color: CustomColors.darkRose,
-                borderRadius: BorderRadius.circular(20)
-              ),
-              width: double.infinity,
-              height: 200,
-              child: const Row(
-                children: [
-                  Column(
-                    children: [
-                      CircleAvatar(                     
-                        radius: 50,
-                        backgroundImage: AssetImage("assets/default_user_profile_image.jpeg"),
-                      ),
-                      VSpace(24),
-                      Text(
-                        "Description",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18
-                        )
-                      )
-                    ],
-                  ),
-                  HSpace(24),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Name",
-                        style: TextStyle(
-                          fontSize: 18
-                        )
-                      ),
-                      VSpace(48),
-                      Text(
-                        "Trainings: 0",
-                        style: TextStyle(
-                          fontSize: 18
-                        )
-                      )
-                    ]
-                  )
-                ],
-              )
-            ),
+            UserProfileSummary(userName: 'Name',),
             const VSpace(40),
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 24),
@@ -136,10 +89,10 @@ class UserProfileInfoPage extends StatelessWidget {
               height: 100,
               child: Column(
                 children: [
-                  UserProfileStat('Wins', 0, 0),
-                  UserProfileStat('Loses', 0, 0),                  
-                  UserProfileStat('Subs', 0, 0),
-                  UserProfileStat('Taps', 0, 0)
+                  UserProfileStat(name: 'Wins', thisWeekCount: 0, inTotalCount: 0),
+                  UserProfileStat(name: 'Loses', thisWeekCount: 0, inTotalCount: 0),              
+                  UserProfileStat(name: 'Subs', thisWeekCount: 0, inTotalCount: 0),
+                  UserProfileStat(name: 'Taps', thisWeekCount: 0, inTotalCount: 0),
                 ],
               ),
             )

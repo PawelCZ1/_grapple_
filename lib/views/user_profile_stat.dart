@@ -9,7 +9,7 @@ class UserProfileStat extends StatelessWidget {
   final int thisWeekCount;
   final int inTotalCount;
   
-  const UserProfileStat(this.name, this.thisWeekCount, this.inTotalCount);
+  const UserProfileStat({ required this.name, required this.thisWeekCount, required this.inTotalCount, super.key});
 
   @override
   Widget build(BuildContext context) {
